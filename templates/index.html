@@ -1,158 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://www.python.org//static/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.python.org//static/favicon.ico"
+    />
     <title>Python Study</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #202020;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: #1E415D;
-            color: #ffffff;
-            padding: 10px;
-            text-align: left;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            color: #306998;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        form {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            width: 250px;
-        }
-
-        button {
-            background-color: #306998;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-left: 10px;
-        }
-
-        button:hover {
-            background-color: #204d74;
-        }
-
-        .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
-        .tech {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            font-size: 20px;
-            color: #306998;
-        }
-        .tech img {
-            max-width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background-color: #E5E8EA;
-            color: #1E415D;
-            text-align: center;
-            padding: 1px;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        
-        footer a {
-            color: #444444;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
     <nav>
-        <a href="/">
-            <img class="python-logo" src="https://www.python.org/static/img/python-logo@2x.png" alt="python™" width="218" height="60">
-        </a>
+      <a href="/">
+        <img
+          class="python-logo"
+          src="https://www.python.org/static/img/python-logo@2x.png"
+          alt="python™"
+          width="218"
+          height="60"
+        />
+      </a>
     </nav>
     <h1>Find Your Dream!</h1>
     <form action="/search">
-        <input type="text" name="keyword" placeholder="Search for jobs...">
-        <button type="submit">Search</button>
+      <input type="text" name="keyword" placeholder="Search for jobs..." />
+      <button type="submit">Search</button>
     </form>
     <div class="tech-stack">
-        <div class="tech"><img src="경로/React-logo.png" alt="React"><br>React</div>
-        <div class="tech"><img src="경로/Vue-logo.png" alt="Vue"><br>Vue</div>
-        <div class="tech"><img src="경로/Angular-logo.png" alt="Angular"><br>Angular</div>
-        <div class="tech"><img src="경로/Node.js-logo.png" alt="Node.js"><br>Node.js</div>
-        <div class="tech"><img src="경로/Django-logo.png" alt="Django"><br>Django</div>
-        <div class="tech"><img src="경로/Flask-logo.png" alt="Flask"><br>Flask</div>
-        <div class="tech"><img src="경로/Ruby-on-Rails-logo.png" alt="Ruby on Rails"><br>Ruby on Rails</div>
-        <div class="tech"><img src="경로/Laravel-logo.png" alt="Laravel"><br>Laravel</div>
-        <div class="tech"><img src="경로/Next.js-logo.png" alt="Next.js"><br>Next.js</div>
+      <div class="tech">
+        <img src="경로/React-logo.png" alt="React" /><br />React
+      </div>
+      <div class="tech"><img src="경로/Vue-logo.png" alt="Vue" /><br />Vue</div>
+      <div class="tech">
+        <img src="경로/Angular-logo.png" alt="Angular" /><br />Angular
+      </div>
+      <div class="tech">
+        <img src="경로/Node.js-logo.png" alt="Node.js" /><br />Node.js
+      </div>
+      <div class="tech">
+        <img src="경로/Django-logo.png" alt="Django" /><br />Django
+      </div>
+      <div class="tech">
+        <img src="경로/Flask-logo.png" alt="Flask" /><br />Flask
+      </div>
+      <div class="tech">
+        <img src="경로/Ruby-on-Rails-logo.png" alt="Ruby on Rails" /><br />Ruby
+        on Rails
+      </div>
+      <div class="tech">
+        <img src="경로/Laravel-logo.png" alt="Laravel" /><br />Laravel
+      </div>
+      <div class="tech">
+        <img src="경로/Next.js-logo.png" alt="Next.js" /><br />Next.js
+      </div>
     </div>
 
-
     <footer>
-        <p>© 2024 Python Study. All rights reserved.</p>
-        <p style="color: #444444;">Contact me at <a href="mailto:jhun@naver.com">jhun@naver.com</a></p>
+      <p>© 2024 Python Study. All rights reserved.</p>
+      <p style="color: #444444">
+        Contact me at <a href="mailto:jhun@naver.com">jhun@naver.com</a>
+      </p>
     </footer>
-</body>
+  </body>
 </html>
 
 <script>
-    const form = document.querySelector('form');
-    const input = form.querySelector('input');
+  const form = document.querySelector("form");
+  const input = form.querySelector("input");
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (!input.value.trim()) {
-            alert('Please enter a keyword :)');
-            return;
-        }
-        const keyword = input.value.trim();
-        window.location.href = `/search?keyword=${keyword}`;
-    });
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!input.value.trim()) {
+      alert("Please enter a keyword :)");
+      return;
+    }
+    const keyword = input.value.trim();
+    window.location.href = `/search?keyword=${keyword}`;
+  });
 </script>

@@ -1,97 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://www.python.org//static/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.python.org//static/favicon.ico"
+    />
     <title>Python Study</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav {
-            background-color: #1E415D;
-            color: #ffffff;
-            padding: 10px;
-            text-align: left;
-        }
-        
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        
-        nav a:hover {
-            text-decoration: underline;
-        }
-        
-        .container {
-            padding: 20px;
-        }
-        
-        .job {
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        .job h2 {
-            color: #306998;
-            margin-top: 0;
-        }
-        
-        .job p {
-            margin: 10px 0;
-        }
-        
-        .job a {
-            display: inline-block;
-            background-color: #306998;
-            color: #ffffff;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        
-        .job a:hover {
-            background-color: #204d74;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
     <nav>
-        <a href="/">
-            <img class="python-logo" src="https://www.python.org/static/img/python-logo@2x.png" alt="python™" width="218" height="60">
-        </a>
+      <a href="/">
+        <img
+          class="python-logo"
+          src="https://www.python.org/static/img/python-logo@2x.png"
+          alt="python™"
+          width="218"
+          height="60"
+        />
+      </a>
     </nav>
-    
+
     <div class="container">
+      <div style="display: flex; justify-content: space-between">
+        <p>
+          Search Keyword Value : <b style="font-size: 1.2rem">{{ keyword }}</b>
+        </p>
 
-        <div style="display: flex; justify-content: space-between;">
-            <p>Search Keyword Value : <b style="font-size: 1.2rem;">{{ keyword }}</b></p>
-
-            <p>검색 결과:  <b>{{ jobs|length }}</b>건</p>
-        </div>
-        {% if jobs %}
-            {% for job in jobs %}
-                <div class="job">
-                    <h2>{{ job.title }}</h2>
-                    <p>{{ job.company }}</p>
-                    <p>{{ job.description }}</p>
-                    <a href="{{ job.url }}" target="_blank">Apply</a>
-                </div>
-            {% endfor %}
-            {% else %}
-                <p>검색 결과가 없습니다.</p>
-        {% endif %}
+        <p>검색 결과: <b>{{ jobs|length }}</b>건</p>
+      </div>
+      {% if jobs %} {% for job in jobs %}
+      <div class="job">
+        <h2>
+          {{ job.title }}
+          <span style="font-size: 0.8rem; color: black"> / {{ job.site }}</span>
+        </h2>
+        <p>{{ job.company }}</p>
+        <p>{{ job.description }}</p>
+        <a href="{{ job.url }}" target="_blank">Apply</a>
+      </div>
+      {% endfor %} {% else %}
+      <p>검색 결과가 없습니다.</p>
+      {% endif %}
     </div>
-</body>
+  </body>
 </html>
