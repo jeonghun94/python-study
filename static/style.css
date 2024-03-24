@@ -62,7 +62,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 20px 130px;
   justify-content: center;
 }
 .tech {
@@ -76,7 +76,7 @@ button:hover {
 }
 .tech img {
   max-width: 100px;
-  height: auto;
+  height: 75px;
   margin-bottom: 10px;
 }
 
